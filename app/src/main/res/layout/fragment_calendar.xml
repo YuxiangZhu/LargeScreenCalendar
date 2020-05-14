@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_calendar"
+            android:padding="20px">
+
+
+            <LinearLayout
+                android:id="@+id/layout_cal_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80px"
+                    android:gravity="center_vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true">
+
+
+                        <LinearLayout
+                            android:id="@+id/layout_pre"
+                            android:layout_width="110px"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="3px"
+                                android:id="@+id/iv_pre"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_pre_month"
+                                android:layout_width="wrap_content"
+                                android:layout_marginStart="3px"
+                                android:layout_height="wrap_content"
+
+                                android:textSize="28px" />
+
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:id="@+id/tv_current_month"
+                            android:layout_width="250px"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/main_base"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+
+                            android:textSize="36px"
+                            android:textStyle="bold" />
+
+
+                        <LinearLayout
+                            android:id="@+id/layout_next"
+                            android:layout_width="110px"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/tv_next_month"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="3px"
+
+                                android:textSize="28px" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3px"
+                                android:id="@+id/iv_next"
+                                />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:id="@+id/iv_cancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_cancel" />
+
+                </RelativeLayout>
+
+
+                <com.ly.tinycalendar.widget.WeekView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp" />
+
+            </LinearLayout>
+
+
+            <com.ly.tinycalendar.widget.CalendarView
+                android:id="@+id/calendar"
+                android:layout_width="match_parent"
+                android:layout_height="900px"
+                android:layout_below="@id/layout_cal_top"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:solar_size="30"
+                app:switch_choose="true" />
+
+        </RelativeLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_go_today"
+            android:layout_width="wrap_content"
+            android:layout_height="107px"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="42px"
+            android:drawableRight="@drawable/ic_right_large"
+            android:drawablePadding="10px"
+            android:paddingStart="80px"
+            android:paddingEnd="80px"
+            android:stateListAnimator="@null"
+            android:text="回到今天"
+            android:textColor="@android:color/white"
+            android:textSize="42px"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,39 @@
+apply plugin: 'com.android.application'
+//依赖库都在dependencies中管理
+apply from: '../dependencies.gradle'
+//版本号都在versions.gradle中管理
+apply from: '../versions.gradle'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.ly.largescreencalendar"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+}
+
+dependencies {
+
+    implementation project(path: ':tinycalendar')
+
+
+}

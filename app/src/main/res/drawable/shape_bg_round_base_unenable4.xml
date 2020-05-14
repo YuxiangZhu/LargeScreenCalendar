@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--增加蒙版-->
+<layer-list android:shape="rectangle"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+  <item >
+    <shape>
+      <gradient
+          android:angle="0"
+          android:startColor="#8014be94"
+          android:endColor="#8014be94"/>
+
+      <!--设置上面两个角的弧度-->
+      <corners
+          android:radius="4px"
+          />
+    </shape>
+  </item>
+
+</layer-list>
+

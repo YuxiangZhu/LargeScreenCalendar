@@ -1,0 +1,2 @@
+rootProject.name='LargeScreenCalendar'
+include ':app', ':tinycalendar'

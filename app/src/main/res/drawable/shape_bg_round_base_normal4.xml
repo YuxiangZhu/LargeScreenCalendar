@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+  <gradient
+      android:angle="0"
+      android:startColor="#14be94"
+      android:endColor="#14be94"/>
+
+  <!--设置上面两个角的弧度-->
+  <corners
+      android:radius="4px"
+     />
+</shape>
